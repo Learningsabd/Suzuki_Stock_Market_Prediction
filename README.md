@@ -1,7 +1,7 @@
-###Suzuki Stock Market Prediction
+# Suzuki Stock Market Prediction
 This project explores various machine learning approaches to predict the stock performance of Suzuki. The repository documents a transition from traditional regression-based forecasting to a more robust classification strategy using advanced feature engineering.
 
-📉 ##Project Evolution & Methodology
+# Project Evolution & Methodology
 1. The Regression Phase (Random Forest & XGBoost)
 Initially, I implemented Random Forest and XGBoost Regressors using historical data sourced from Kaggle.
 
@@ -23,7 +23,7 @@ The Solution: I implemented a Random Forest Classifier.
 
 The Result: By shifting from regression to binary classification, the model achieved much higher reliability and better performance metrics.
 
-🛠️ ##Feature Engineering
+# Feature Engineering
 A key breakthrough in this project was moving away from raw "High, Low, Close" prices, which often lead to data leakage or lagging predictions. Instead, I focused on Stationary Features and Momentum Indicators:
 
 Returns: Calculated percentage change in closing prices to normalize the data.
@@ -34,14 +34,14 @@ Rolling Statistics: Implemented a rolling_mean and rolling_std (window of 3) to 
 
 Why this works: These features transform the data from absolute values to relative movements, allowing the model to recognize patterns regardless of the specific price level.
 
-🚀 ##Key Insights
+# Key Insights
 Extrapolation Limits: Tree-based regressors cannot predict values higher or lower than what they have seen in the training set.
 
 Classification > Regression: In high-volatility environments, predicting direction (trend) is often more effective than predicting absolute value.
 
 Feature Selection: Engineering lags and rolling windows is more effective for time-series than using raw price data.
 
-💻 ##Tech Stack
+# Tech Stack
 Language: Python
 
 Libraries: Pandas, NumPy, Scikit-learn, XGBoost, Statsmodels, Matplotlib/Seaborn
